@@ -8,22 +8,35 @@
 import UIKit
 
 class RestaurantDetailViewController: UIViewController {
-
+    
+    var date = Date()
+    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var cuisineTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var notesTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        dateTextField.text = date.formatted()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        guard let name = nameTextField.text,
+              let cuisine = cuisineTextField.text,
+              let city = cityTextField.text,
+              let notes = notesTextView.text else { return }
+        
+        let restaurant = Restaurant(
+            name: name,
+            date: date,
+            cuisine: cuisine,
+            city: city,
+            notes: notes)
+        
+        RestaurantController.shared.createEntry(restaurant: restaurant)
     }
-    */
-
 }

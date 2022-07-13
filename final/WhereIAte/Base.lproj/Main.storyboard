@@ -44,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="177" y="794"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Detail View Controller-->
         <scene sceneID="gb7-eY-lxM">
             <objects>
-                <viewController id="JiT-mW-esG" sceneMemberID="viewController">
+                <viewController id="JiT-mW-esG" customClass="RestaurantDetailViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UeV-dQ-LGE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,18 +68,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9a-pm-frr">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-dG-apG">
                                         <rect key="frame" x="0.0" y="162" width="373" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="aeb-gA-Wf9"/>
+                                            <constraint firstAttribute="height" constant="34" id="EiS-kK-F1W"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-dG-apG">
+                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9a-pm-frr">
                                         <rect key="frame" x="0.0" y="243.5" width="373" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="EiS-kK-F1W"/>
+                                            <constraint firstAttribute="height" constant="34" id="aeb-gA-Wf9"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -106,7 +106,20 @@
                             <constraint firstItem="Hf5-Dq-OXm" firstAttribute="width" secondItem="asT-SV-Nms" secondAttribute="width" multiplier="0.9" id="crd-iy-P7A"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ET4-fJ-Nal"/>
+                    <navigationItem key="navigationItem" id="ET4-fJ-Nal">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="phF-8b-Awx">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="JiT-mW-esG" id="S5b-W7-pzH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityTextField" destination="gWy-dG-apG" id="eL2-jP-3cV"/>
+                        <outlet property="cuisineTextField" destination="T79-ea-5vf" id="2dp-pv-aPu"/>
+                        <outlet property="dateTextField" destination="e9a-pm-frr" id="we1-OF-V0K"/>
+                        <outlet property="nameTextField" destination="ZVH-J7-Z0f" id="gWt-Ic-LC9"/>
+                        <outlet property="notesTextView" destination="z6m-TS-mCg" id="BxH-ng-TCF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZG-aC-Wq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

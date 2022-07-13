@@ -14,6 +14,12 @@ class RestaurantsTableViewController: UITableViewController {
         
         navigationItem.title = "🍔"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
 
     // MARK: - Table view data source
 
@@ -22,13 +28,16 @@ class RestaurantsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 25
+        return RestaurantController.shared.fetchedEntries.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath)
-
-        cell.textLabel?.text = "Bonjour Brooklyn"
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "restaurantCell", for: indexPath)
+        
+        let restaurant = RestaurantController.shared.fetchedEntries[indexPath.row]
+        
+        cell.textLabel?.text = restaurant.name
+        cell.detailTextLabel?.text = "\(restaurant.cuisine) in \(restaurant.city)"
 
         return cell
     }

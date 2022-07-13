@@ -3,6 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +12,6 @@
         <!--Root View Controller-->
         <scene sceneID="I4n-Yj-Dyi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="39D-ah-RLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="iA2-V3-WCC" customClass="RestaurantsTableViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="V25-hc-niM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -31,10 +32,85 @@
                             <outlet property="delegate" destination="iA2-V3-WCC" id="exb-Xa-deG"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="fTu-dg-hhJ"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="fTu-dg-hhJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oxr-c4-yuF">
+                            <connections>
+                                <segue destination="JiT-mW-esG" kind="show" id="Bcm-VM-N2o"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="39D-ah-RLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="177" y="794"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gb7-eY-lxM">
+            <objects>
+                <viewController id="JiT-mW-esG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UeV-dQ-LGE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hf5-Dq-OXm">
+                                <rect key="frame" x="20.5" y="88" width="373" height="464.5"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-J7-Z0f">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuisine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T79-ea-5vf">
+                                        <rect key="frame" x="0.0" y="81" width="373" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="efx-7E-I5c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9a-pm-frr">
+                                        <rect key="frame" x="0.0" y="162" width="373" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="aeb-gA-Wf9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-dG-apG">
+                                        <rect key="frame" x="0.0" y="243.5" width="373" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="EiS-kK-F1W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What made it memorable..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z6m-TS-mCg">
+                                        <rect key="frame" x="0.0" y="324.5" width="373" height="140"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="140" id="dy6-9s-z95"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="asT-SV-Nms"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="top" secondItem="asT-SV-Nms" secondAttribute="top" id="1Ui-EZ-k4q"/>
+                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="height" secondItem="asT-SV-Nms" secondAttribute="height" multiplier="0.6" id="1wX-ay-J9B"/>
+                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="centerX" secondItem="asT-SV-Nms" secondAttribute="centerX" id="Thy-Ul-khT"/>
+                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="width" secondItem="asT-SV-Nms" secondAttribute="width" multiplier="0.9" id="crd-iy-P7A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ET4-fJ-Nal"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZG-aC-Wq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1064" y="794"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FEy-ud-6Fl">
@@ -54,6 +130,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

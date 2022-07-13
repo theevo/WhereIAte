@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC0169D2287E57E6003086E1 /* RestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0169D1287E57E6003086E1 /* RestaurantsTableViewController.swift */; };
+		AC0169E0287E6798003086E1 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0169DF287E6798003086E1 /* RestaurantDetailViewController.swift */; };
 		AC1F093D287E03AD000C59A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F093C287E03AD000C59A3 /* AppDelegate.swift */; };
 		AC1F093F287E03AD000C59A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1F093E287E03AD000C59A3 /* SceneDelegate.swift */; };
 		AC1F0944287E03AD000C59A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1F0942287E03AD000C59A3 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		AC0169D1287E57E6003086E1 /* RestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsTableViewController.swift; sourceTree = "<group>"; };
+		AC0169DF287E6798003086E1 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		AC1F0939287E03AD000C59A3 /* WhereIAte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereIAte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1F093C287E03AD000C59A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC1F093E287E03AD000C59A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				AC1F094D287E03AE000C59A3 /* Info.plist */,
 				AC1F0945287E03AD000C59A3 /* WhereIAte.xcdatamodeld */,
 				AC0169D1287E57E6003086E1 /* RestaurantsTableViewController.swift */,
+				AC0169DF287E6798003086E1 /* RestaurantDetailViewController.swift */,
 			);
 			path = WhereIAte;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			files = (
 				AC1F0947287E03AD000C59A3 /* WhereIAte.xcdatamodeld in Sources */,
 				AC1F093D287E03AD000C59A3 /* AppDelegate.swift in Sources */,
+				AC0169E0287E6798003086E1 /* RestaurantDetailViewController.swift in Sources */,
 				AC0169D2287E57E6003086E1 /* RestaurantsTableViewController.swift in Sources */,
 				AC1F093F287E03AD000C59A3 /* SceneDelegate.swift in Sources */,
 			);

@@ -1,151 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jIT-pd-dHn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x6U-UW-WWF">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
-        <scene sceneID="I4n-Yj-Dyi">
+        <scene sceneID="oPH-3W-5zb">
             <objects>
-                <tableViewController id="iA2-V3-WCC" customClass="RestaurantsTableViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="V25-hc-niM">
+                <tableViewController id="Bcu-J0-hMG" customClass="RestaurantsTableViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="x2F-AK-ifp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" id="LzS-Jl-kGv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="restaurantCell" id="nh8-xI-g8p">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LzS-Jl-kGv" id="fSu-mO-efB">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nh8-xI-g8p" id="lDm-aJ-7Kw">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pr8-fG-BD4" kind="show" id="In2-QM-6DV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="iA2-V3-WCC" id="voB-KM-cxt"/>
-                            <outlet property="delegate" destination="iA2-V3-WCC" id="exb-Xa-deG"/>
+                            <outlet property="dataSource" destination="Bcu-J0-hMG" id="Z0Q-mp-EdH"/>
+                            <outlet property="delegate" destination="Bcu-J0-hMG" id="JcF-ze-aLc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="fTu-dg-hhJ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Oxr-c4-yuF">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="hHw-GG-Y7a">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ja0-Cv-H8M">
                             <connections>
-                                <segue destination="JiT-mW-esG" kind="show" id="Bcm-VM-N2o"/>
+                                <segue destination="pr8-fG-BD4" kind="show" id="Ebc-YJ-TkK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="39D-ah-RLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMs-2k-LiS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="177" y="794"/>
+            <point key="canvasLocation" x="526" y="169"/>
         </scene>
         <!--Restaurant Detail View Controller-->
-        <scene sceneID="gb7-eY-lxM">
+        <scene sceneID="EUT-zb-BPg">
             <objects>
-                <viewController id="JiT-mW-esG" customClass="RestaurantDetailViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UeV-dQ-LGE">
+                <viewController id="pr8-fG-BD4" customClass="RestaurantDetailViewController" customModule="WhereIAte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G24-qr-Yix">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Hf5-Dq-OXm">
-                                <rect key="frame" x="20.5" y="88" width="373" height="464.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="nFm-Ow-Wtm">
+                                <rect key="frame" x="20.5" y="320" width="373" height="310"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Restaurant Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-J7-Z0f">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GXP-wK-c8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="62"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuisine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T79-ea-5vf">
-                                        <rect key="frame" x="0.0" y="81" width="373" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="efx-7E-I5c"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuisine" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ey-VK-fnH">
+                                        <rect key="frame" x="0.0" y="83" width="373" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-dG-apG">
-                                        <rect key="frame" x="0.0" y="162" width="373" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="EiS-kK-F1W"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xUt-7H-Qce">
+                                        <rect key="frame" x="0.0" y="165.5" width="373" height="61.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9a-pm-frr">
-                                        <rect key="frame" x="0.0" y="243.5" width="373" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="aeb-gA-Wf9"/>
-                                        </constraints>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What was memorable?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nc2-DK-CF4">
+                                        <rect key="frame" x="0.0" y="248" width="373" height="62"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What made it memorable..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="z6m-TS-mCg">
-                                        <rect key="frame" x="0.0" y="324.5" width="373" height="140"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="140" id="dy6-9s-z95"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="asT-SV-Nms"/>
+                        <viewLayoutGuide key="safeArea" id="YPt-LN-woQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="top" secondItem="asT-SV-Nms" secondAttribute="top" id="1Ui-EZ-k4q"/>
-                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="height" secondItem="asT-SV-Nms" secondAttribute="height" multiplier="0.6" id="1wX-ay-J9B"/>
-                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="centerX" secondItem="asT-SV-Nms" secondAttribute="centerX" id="Thy-Ul-khT"/>
-                            <constraint firstItem="Hf5-Dq-OXm" firstAttribute="width" secondItem="asT-SV-Nms" secondAttribute="width" multiplier="0.9" id="crd-iy-P7A"/>
+                            <constraint firstItem="nFm-Ow-Wtm" firstAttribute="height" secondItem="YPt-LN-woQ" secondAttribute="height" multiplier="0.4" id="BnN-Uh-nJD"/>
+                            <constraint firstItem="nFm-Ow-Wtm" firstAttribute="centerX" secondItem="YPt-LN-woQ" secondAttribute="centerX" id="CZu-wS-mTF"/>
+                            <constraint firstItem="nFm-Ow-Wtm" firstAttribute="width" secondItem="YPt-LN-woQ" secondAttribute="width" multiplier="0.9" id="n53-OK-RGe"/>
+                            <constraint firstItem="nFm-Ow-Wtm" firstAttribute="centerY" secondItem="YPt-LN-woQ" secondAttribute="centerY" id="yNx-Cb-skB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ET4-fJ-Nal">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="phF-8b-Awx">
+                    <navigationItem key="navigationItem" id="zAt-qe-DvT">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="VfQ-L6-lIK">
                             <connections>
-                                <action selector="saveButtonTapped:" destination="JiT-mW-esG" id="S5b-W7-pzH"/>
+                                <action selector="saveButtonTapped:" destination="pr8-fG-BD4" id="eXW-Kb-xrk"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="cityTextField" destination="gWy-dG-apG" id="eL2-jP-3cV"/>
-                        <outlet property="cuisineTextField" destination="T79-ea-5vf" id="2dp-pv-aPu"/>
-                        <outlet property="dateTextField" destination="e9a-pm-frr" id="we1-OF-V0K"/>
-                        <outlet property="nameTextField" destination="ZVH-J7-Z0f" id="gWt-Ic-LC9"/>
-                        <outlet property="notesTextView" destination="z6m-TS-mCg" id="BxH-ng-TCF"/>
+                        <outlet property="cityTextField" destination="xUt-7H-Qce" id="Gz3-Ek-Jjp"/>
+                        <outlet property="cuisineTextField" destination="7ey-VK-fnH" id="IYL-6F-OTf"/>
+                        <outlet property="nameTextField" destination="GXP-wK-c8b" id="AsQ-qC-0hv"/>
+                        <outlet property="notesTextField" destination="nc2-DK-CF4" id="SIX-qZ-X1b"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GZG-aC-Wq4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2q-DS-zE5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1064" y="794"/>
+            <point key="canvasLocation" x="1388" y="169"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="FEy-ud-6Fl">
+        <scene sceneID="YJu-6C-94R">
             <objects>
-                <navigationController id="jIT-pd-dHn" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yr5-da-PaK">
+                <navigationController id="x6U-UW-WWF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HVA-cC-NVl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="iA2-V3-WCC" kind="relationship" relationship="rootViewController" id="XeG-X6-IhL"/>
+                        <segue destination="Bcu-J0-hMG" kind="relationship" relationship="rootViewController" id="1aW-eX-OBx"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uvj-0K-QWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyL-x1-ppY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-732" y="794"/>
+            <point key="canvasLocation" x="-364" y="169"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ebc-YJ-TkK"/>
+    </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

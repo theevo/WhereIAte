@@ -1,6 +1,11 @@
 //
 //  CoreDataStack.swift
+//  WhereIAte
 //
+//  Created by Theo Vora on 7/13/22.
+
+// This is foundational. will not change from app to app.
+// copy / paste with no changes!
 
 import CoreData
 

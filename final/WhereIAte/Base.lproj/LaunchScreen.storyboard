@@ -16,15 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Howls-Moving-Castle-Food" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-q5-iSs">
-                                <rect key="frame" x="20.5" y="284.5" width="373" height="201.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="BG0-q5-iSs" secondAttribute="height" multiplier="1920:1038" id="atj-m2-GeU"/>
-                                </constraints>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Howls-Moving-Castle-Food" translatesAutoresizingMaskIntoConstraints="NO" id="JD6-3A-x7u">
+                                <rect key="frame" x="87" y="389" width="240" height="128"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where I Ate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IpT-EI-xeA">
-                                <rect key="frame" x="76.5" y="506" width="261" height="49"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where I Ate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdv-hw-GhN">
+                                <rect key="frame" x="162.5" y="547" width="89" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,12 +29,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IpT-EI-xeA" firstAttribute="width" secondItem="BG0-q5-iSs" secondAttribute="width" multiplier="0.7" id="402-Ok-Xf5"/>
-                            <constraint firstItem="BG0-q5-iSs" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.9" id="5xo-JY-igf"/>
-                            <constraint firstItem="IpT-EI-xeA" firstAttribute="top" secondItem="BG0-q5-iSs" secondAttribute="bottom" constant="20" id="7ay-gf-OCu"/>
-                            <constraint firstItem="BG0-q5-iSs" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Sa4-rh-BOg"/>
-                            <constraint firstItem="BG0-q5-iSs" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.85" id="V90-bc-BwT"/>
-                            <constraint firstItem="IpT-EI-xeA" firstAttribute="centerX" secondItem="BG0-q5-iSs" secondAttribute="centerX" id="uMe-Sn-rvn"/>
+                            <constraint firstItem="JD6-3A-x7u" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8pe-y6-ARl"/>
+                            <constraint firstItem="cdv-hw-GhN" firstAttribute="centerX" secondItem="JD6-3A-x7u" secondAttribute="centerX" id="Dec-Ut-bUB"/>
+                            <constraint firstItem="cdv-hw-GhN" firstAttribute="top" secondItem="JD6-3A-x7u" secondAttribute="bottom" constant="30" id="JDo-Es-m2x"/>
+                            <constraint firstItem="JD6-3A-x7u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="L5C-sk-v6O"/>
+                            <constraint firstItem="JD6-3A-x7u" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.57971" id="dTS-zs-MAf"/>
+                            <constraint firstItem="JD6-3A-x7u" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.142857" id="f3d-gy-DoZ"/>
                         </constraints>
                     </view>
                 </viewController>

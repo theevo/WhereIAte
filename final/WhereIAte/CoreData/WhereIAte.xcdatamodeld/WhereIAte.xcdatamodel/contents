@@ -3,11 +3,10 @@
     <entity name="Restaurant" representedClassName="Restaurant" syncable="YES" codeGenerationType="class">
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="cuisine" optional="YES" attributeType="String"/>
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Restaurant" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Restaurant" positionX="-63" positionY="-18" width="128" height="89"/>
     </elements>
 </model>

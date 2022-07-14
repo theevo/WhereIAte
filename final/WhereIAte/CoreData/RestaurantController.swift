@@ -42,6 +42,9 @@ class RestaurantController {
         notes: String
     ) {
         restaurant.name = name
+        restaurant.cuisine = cuisine
+        restaurant.city = city
+        restaurant.notes = notes
         
         CoreDataStack.saveContext()
     }

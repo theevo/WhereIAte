@@ -2,6 +2,12 @@
 
 This app allows users to record memorable visits to their favorite restaurants.
 
+## Screens
+
+![](readme_images/LaunchScreen.png)
+![](readme_images/TableView.png)
+![](readme_images/DetailView.png)
+
 ## CoreData Stack
 
 ```swift
@@ -43,16 +49,18 @@ enum CoreDataStack {
 }
 ```
 
-## Convenience Init
+## Convenience Initializer
 
-```
+```swift
+//
+//  Restaurant+Convenience.swift
+//
+
 import CoreData
 
 extension Restaurant {
-//    @discardableResult
     convenience init(
         name: String,
-        date: Date,
         cuisine: String,
         city: String,
         notes: String,
@@ -69,7 +77,11 @@ extension Restaurant {
 
 ## Model Controller
 
-```
+```swift
+//
+//  RestaurantController.swift
+//
+
 import CoreData
 
 class RestaurantController {

@@ -67,7 +67,6 @@ extension Restaurant {
         context: NSManagedObjectContext = CoreDataStack.managedObjectContext) {
         self.init(context: context)
             self.name = name
-            self.date = date
             self.cuisine = cuisine
             self.city = city
             self.notes = notes
